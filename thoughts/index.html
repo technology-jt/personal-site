@@ -1,0 +1,11 @@
+---
+layout: default
+title: Justin Theodore Thomas's Blog
+---
+	<h1>{{ page.title }}</h1>
+	<ul class="thoughts">
+
+	  {% for thought in site.thoughts %}
+	    <li><span>{{ thought.date | date_to_string }}</span> » <a href="{{ thought.url }}" title="{{ thought.title }}">{{ thought.title }}</a></li>
+	  {% endfor %}
+	</ul>
